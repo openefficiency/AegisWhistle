@@ -11,7 +11,7 @@ const UseCasesSection: React.FC = () => {
             Powerful <span className="text-blue-400">Use Cases</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-            From Employee Engagement to HR & Legal, Aegis AI transforms how businesses handle audio.
+            From Employee Engagement to HR & Legal, Aegis AI 📣 transforms how businesses handle audio.
           </p>
         </div>
 

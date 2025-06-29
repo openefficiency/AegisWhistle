@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
           </h1>
           
           <p className="text-lg sm:text-xl text-gray-300 max-w-4xl mx-auto mb-12">
-            Aegis AI protects employees, automates reports, and rewards courage—<br />
+            Aegis AI 📣 protects employees, automates reports, and rewards courage—<br />
             anonymously. Military-grade security meets AI-driven justice.
           </p>
         </div>
@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center space-x-2">
                 <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                <span className="text-white font-medium">Aegis AI Assistant</span>
+                <span className="text-white font-medium">Aegis AI 📣 Assistant</span>
               </div>
               <span className="text-green-400 text-sm bg-green-400/20 px-2 py-1 rounded-full animate-pulse">Live</span>
             </div>
@@ -70,7 +70,7 @@ const Hero: React.FC = () => {
               className="w-full bg-gradient-to-r from-purple-600 to-violet-600 hover:from-purple-700 hover:to-violet-700 text-white py-3 rounded-lg flex items-center justify-center space-x-2 transition-all duration-300 hover:scale-105 hover:shadow-lg"
             >
               <Mic className="w-5 h-5" />
-              <span>Talk to Aegis AI</span>
+              <span>Talk to Aegis AI 📣</span>
             </a>
             
             <p className="text-gray-400 text-xs text-center mt-3 flex items-center justify-center space-x-1">

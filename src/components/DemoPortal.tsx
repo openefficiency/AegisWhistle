@@ -9,7 +9,7 @@ const DemoPortal: React.FC = () => {
           {/* Left Content */}
           <div className="text-center lg:text-left">
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6 leading-tight">
-              Ready to start a <span className="text-white">conversation with</span> <span className="text-blue-400">Aegis AI?</span>
+              Ready to start a <span className="text-white">conversation with</span> <span className="text-blue-400">Aegis AI 📣?</span>
             </h2>
             
             <p className="text-xl text-gray-300 mb-8">

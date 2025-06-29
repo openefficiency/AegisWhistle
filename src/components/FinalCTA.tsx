@@ -15,7 +15,7 @@ const FinalCTA: React.FC = () => {
           rel="noopener noreferrer"
           className="bg-gradient-to-r from-white to-gray-100 text-red-900 px-8 py-4 rounded-lg text-lg font-bold hover:from-gray-100 hover:to-gray-200 transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center space-x-2 mx-auto w-fit"
         >
-          <span>How can Aegis AI help you today?</span>
+          <span>How can Aegis AI 📣 help you today?</span>
           <span>→</span>
         </a>
       </div>

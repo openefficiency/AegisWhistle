@@ -19,7 +19,7 @@ const Header: React.FC = () => {
               onClick={() => setIsWaitlistModalOpen(true)}
               className="hidden sm:block text-white/90 hover:text-white transition-all duration-300 px-4 py-2 rounded-lg border border-white/20 hover:border-white/40 font-medium backdrop-blur-sm hover:scale-105"
             >
-              Apply for Aegis AI Pilot Waitlist
+              Apply for Aegis AI 📣 Pilot Waitlist
             </button>
             <a 
               href="https://backfeed.xyz/" 
@@ -28,7 +28,7 @@ const Header: React.FC = () => {
               className="flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-emerald-500 to-green-500 hover:from-emerald-600 hover:to-green-600 text-white rounded-lg transition-all duration-300 font-medium shadow-lg hover:shadow-xl hover:scale-105"
             >
               <Play className="w-4 h-4" />
-              <span>Watch Aegis AI in Action</span>
+              <span>Watch Aegis AI 📣 in Action</span>
             </a>
           </div>
         </nav>

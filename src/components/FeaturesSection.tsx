@@ -13,11 +13,11 @@ const FeaturesSection: React.FC = () => {
             <div>
               <div className="flex items-center space-x-2 mb-4">
                 <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                <span className="text-green-400 text-sm font-medium">Aegis AI-Powered Technology</span>
+                <span className="text-green-400 text-sm font-medium">Aegis AI 📣-Powered Technology</span>
               </div>
               
               <h2 className="text-4xl font-bold text-white mb-4">
-                Aegis AI<br />
+                Aegis AI 📣<br />
                 <span className="text-blue-400">Listens First</span>
               </h2>
               
@@ -30,7 +30,7 @@ const FeaturesSection: React.FC = () => {
                   onClick={() => setIsWaitlistModalOpen(true)}
                   className="bg-gradient-to-r from-white to-gray-100 text-black px-8 py-4 rounded-lg font-semibold hover:from-gray-100 hover:to-gray-200 transition-all duration-300 hover:scale-105 hover:shadow-xl flex items-center justify-center space-x-2"
                 >
-                  <span>Apply for Aegis AI Pilot Waitlist</span>
+                  <span>Apply for Aegis AI 📣 Pilot Waitlist</span>
                   <span>→</span>
                 </button>
                 <a 
@@ -40,7 +40,7 @@ const FeaturesSection: React.FC = () => {
                   className="text-white border border-white/30 px-8 py-4 rounded-lg hover:border-white/50 transition-all duration-300 hover:bg-white/10 font-semibold backdrop-blur-sm flex items-center justify-center space-x-2 hover:scale-105"
                 >
                   <Play className="w-4 h-4" />
-                  <span>Watch Aegis AI in Action</span>
+                  <span>Watch Aegis AI 📣 in Action</span>
                 </a>
               </div>
               
@@ -107,7 +107,7 @@ const FeaturesSection: React.FC = () => {
             <h3 className="text-3xl font-bold text-white text-center mb-4">
               Your Voice. <span className="text-blue-400">Unsilenced.</span>
             </h3>
-            <p className="text-gray-300 text-center mb-12">Aegis AI combines:</p>
+            <p className="text-gray-300 text-center mb-12">Aegis AI 📣 combines:</p>
             
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="bg-black/30 backdrop-blur-xl border border-purple-500/20 rounded-2xl p-6 text-center hover:border-purple-400/40 transition-all duration-300 hover:scale-105 shadow-xl">

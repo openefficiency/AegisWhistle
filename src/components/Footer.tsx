@@ -54,15 +54,15 @@ const Footer: React.FC = () => {
       case 'terms':
         return {
           title: 'Terms of Service',
-          content: `AEGIS AI TERMS OF SERVICE
+          content: `AEGIS AI 📣 TERMS OF SERVICE
 
 Last Updated: January 2025
 
 1. ACCEPTANCE OF TERMS
-By accessing or using Aegis AI services, you agree to be bound by these Terms of Service and all applicable laws and regulations.
+By accessing or using Aegis AI 📣 services, you agree to be bound by these Terms of Service and all applicable laws and regulations.
 
 2. DESCRIPTION OF SERVICE
-Aegis AI provides AI-powered employee engagement and whistleblower protection services, including:
+Aegis AI 📣 provides AI-powered employee engagement and whistleblower protection services, including:
 - Anonymous reporting systems
 - AI-driven case analysis and triage
 - Secure communication channels
@@ -87,7 +87,7 @@ Aegis AI provides AI-powered employee engagement and whistleblower protection se
 - Attempts to compromise system security
 
 6. LIMITATION OF LIABILITY
-Aegis AI provides services "as is" without warranties. We are not liable for indirect, incidental, or consequential damages.
+Aegis AI 📣 provides services "as is" without warranties. We are not liable for indirect, incidental, or consequential damages.
 
 7. MODIFICATIONS
 We reserve the right to modify these terms at any time. Continued use constitutes acceptance of modified terms.
@@ -100,12 +100,12 @@ For questions about these terms, contact: Info@OpenEfficiency.Org`
       case 'privacy':
         return {
           title: 'Privacy Policy',
-          content: `AEGIS AI PRIVACY POLICY
+          content: `AEGIS AI 📣 PRIVACY POLICY
 
 Last Updated: January 2025
 
 1. COMMITMENT TO PRIVACY
-Aegis AI is built on the principle of absolute anonymity. We do not collect, store, or process any personally identifiable information.
+Aegis AI 📣 is built on the principle of absolute anonymity. We do not collect, store, or process any personally identifiable information.
 
 2. INFORMATION WE DO NOT COLLECT
 - Names, email addresses, or contact information
@@ -158,12 +158,12 @@ This policy reflects our unwavering commitment to protecting whistleblowers and 
       case 'security':
         return {
           title: 'Security',
-          content: `AEGIS AI SECURITY FRAMEWORK
+          content: `AEGIS AI 📣 SECURITY FRAMEWORK
 
 Last Updated: January 2025
 
 1. SECURITY OVERVIEW
-Aegis AI employs military-grade security measures to protect user anonymity and data integrity.
+Aegis AI 📣 employs military-grade security measures to protect user anonymity and data integrity.
 
 2. ENCRYPTION STANDARDS
 - AES-256 encryption for all data at rest
@@ -239,7 +239,7 @@ Our security measures are continuously updated to address emerging threats and m
             <div className="lg:col-span-1">
               <div className="flex items-center space-x-2 mb-4">
                 <Shield className="w-8 h-8 text-white" />
-                <span className="text-xl font-bold text-white">Aegis AI</span>
+                <span className="text-xl font-bold text-white">Aegis AI 📣</span>
               </div>
               
               {/* Large Tagline */}
@@ -544,7 +544,7 @@ Our security measures are continuously updated to address emerging threats and m
                   onClick={() => setIsWaitlistModalOpen(true)}
                   className="bg-gradient-to-r from-purple-600 to-violet-600 hover:from-purple-700 hover:to-violet-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105"
                 >
-                  Apply for Aegis AI Pilot Waitlist
+                  Apply for Aegis AI 📣 Pilot Waitlist
                 </button>
               </div>
             </div>

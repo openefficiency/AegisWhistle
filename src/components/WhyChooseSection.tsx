@@ -15,7 +15,7 @@ const WhyChooseSection: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-            Why Choose <span className="text-blue-400">Aegis AI?</span>
+            Why Choose <span className="text-blue-400">Aegis AI 📣?</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Our advanced AI technology delivers unmatched performance in audio analysis and understanding.
@@ -103,7 +103,7 @@ const WhyChooseSection: React.FC = () => {
               <div className="mt-6">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-purple-400 text-sm">Processing Speed</span>
-                  <span className="text-purple-300 text-sm font-bold">&lt; 100ms</span>
+                  <span className="text-purple-300 text-sm font-bold">< 100ms</span>
                 </div>
                 <div className="w-full bg-gray-700/50 rounded-full h-2 overflow-hidden">
                   <div className="bg-gradient-to-r from-purple-500 to-violet-500 h-2 rounded-full" 
@@ -223,7 +223,7 @@ const WhyChooseSection: React.FC = () => {
               Ready to experience the future of audio intelligence?
             </h3>
             <p className="text-gray-300 mb-6">
-              Join thousands of businesses already transforming their operations with Aegis AI.
+              Join thousands of businesses already transforming their operations with Aegis AI 📣.
             </p>
             <div className="flex items-center justify-center space-x-6">
               <div className="text-center">

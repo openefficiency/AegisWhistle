@@ -70,7 +70,7 @@ const PilotSpotlight: React.FC = () => {
               onClick={() => setIsWaitlistModalOpen(true)}
               className="bg-gradient-to-r from-purple-600 to-fuchsia-600 hover:from-purple-700 hover:to-fuchsia-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl flex items-center space-x-2"
             >
-              <span>Apply for Aegis AI Pilot Waitlist</span>
+              <span>Apply for Aegis AI 📣 Pilot Waitlist</span>
               <span>→</span>
             </button>
           </div>
