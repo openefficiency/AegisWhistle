@@ -116,8 +116,8 @@ const PilotWaitlistModal: React.FC<PilotWaitlistModalProps> = ({ isOpen, onClose
         <div className="flex items-center justify-between p-6 border-b border-white/10">
           <div>
             <div className="flex items-center space-x-2 mb-2">
-              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-              <span className="text-green-400 text-sm font-medium">✅ Form is Live & Working</span>
+              <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></div>
+              <span className="text-orange-400 text-sm font-medium">Limited Spots Available</span>
             </div>
             <h2 className="text-2xl font-bold text-white">Apply for Aegis AI Pilot Waitlist</h2>
             <p className="text-gray-300 mt-2">Be among the first to experience Aegis AI that truly listens. Help shape the future of employee engagement.</p>
@@ -139,7 +139,7 @@ const PilotWaitlistModal: React.FC<PilotWaitlistModalProps> = ({ isOpen, onClose
             <h3 className="text-2xl font-bold text-white mb-2">Application Submitted Successfully!</h3>
             <p className="text-gray-300 mb-4">Thank you for your interest in the Aegis AI pilot program.</p>
             <div className="bg-green-500/20 border border-green-500/30 rounded-lg p-4 mb-4">
-              <p className="text-green-300 font-medium">✅ Your application has been received via Formspree</p>
+              <p className="text-green-300 font-medium">✅ Your application has been received</p>
               <p className="text-green-400 text-sm mt-1">We'll contact you within 48 hours</p>
             </div>
             <div className="bg-blue-500/20 border border-blue-500/30 rounded-lg p-4 mb-4">
@@ -150,15 +150,6 @@ const PilotWaitlistModal: React.FC<PilotWaitlistModalProps> = ({ isOpen, onClose
         ) : (
           /* Form */
           <form onSubmit={handleSubmit} className="p-6 space-y-6">
-            {/* Success Message */}
-            <div className="bg-green-500/20 border border-green-500/30 rounded-lg p-4 flex items-center space-x-2">
-              <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-              <div>
-                <p className="text-green-300 text-sm font-medium">Form Integration Active</p>
-                <p className="text-green-400 text-xs">Connected to Formspree - submissions will be delivered to your email</p>
-              </div>
-            </div>
-
             {/* Error Message */}
             {error && (
               <div className="bg-red-500/20 border border-red-500/30 rounded-lg p-4 flex items-center space-x-2">
@@ -328,7 +319,7 @@ const PilotWaitlistModal: React.FC<PilotWaitlistModalProps> = ({ isOpen, onClose
               {isSubmitting ? (
                 <>
                   <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
-                  <span>Submitting via Formspree...</span>
+                  <span>Submitting Application...</span>
                 </>
               ) : (
                 <>
