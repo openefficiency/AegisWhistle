@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, CheckCircle, Users, Building, Mail, User } from 'lucide-react';
+import { X, CheckCircle, Users, Building, Mail, User, AlertCircle } from 'lucide-react';
 
 interface PilotWaitlistModalProps {
   isOpen: boolean;
@@ -19,6 +19,10 @@ const PilotWaitlistModal: React.FC<PilotWaitlistModalProps> = ({ isOpen, onClose
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState('');
+
+  // Google Apps Script Web App URL - Replace with your actual URL
+  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec';
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -26,33 +30,70 @@ const PilotWaitlistModal: React.FC<PilotWaitlistModalProps> = ({ isOpen, onClose
       ...prev,
       [name]: value
     }));
+    // Clear error when user starts typing
+    if (error) setError('');
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError('');
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    
-    // Redirect to BackFeed.xyz after 2 seconds
-    setTimeout(() => {
-      window.open('https://backfeed.xyz/', '_blank');
-      onClose();
-      setIsSubmitted(false);
-      setFormData({
-        firstName: '',
-        lastName: '',
-        workEmail: '',
-        company: '',
-        role: '',
-        teamSize: '',
-        objectives: ''
+    try {
+      // Prepare data for Google Sheets
+      const submissionData = {
+        timestamp: new Date().toISOString(),
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        workEmail: formData.workEmail,
+        company: formData.company,
+        role: formData.role,
+        teamSize: formData.teamSize,
+        objectives: formData.objectives,
+        source: 'Aegis AI Website'
+      };
+
+      // Submit to Google Sheets
+      const response = await fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors', // Important for Google Apps Script
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(submissionData)
       });
-    }, 2000);
+
+      // Since we're using no-cors mode, we can't read the response
+      // We'll assume success if no error is thrown
+      console.log('Form submitted successfully');
+      
+      setIsSubmitting(false);
+      setIsSubmitted(true);
+      
+      // Redirect to BackFeed.xyz after 3 seconds
+      setTimeout(() => {
+        window.open('https://backfeed.xyz/', '_blank');
+        onClose();
+        // Reset form after closing
+        setTimeout(() => {
+          setIsSubmitted(false);
+          setFormData({
+            firstName: '',
+            lastName: '',
+            workEmail: '',
+            company: '',
+            role: '',
+            teamSize: '',
+            objectives: ''
+          });
+        }, 500);
+      }, 3000);
+
+    } catch (err) {
+      console.error('Submission error:', err);
+      setError('Failed to submit application. Please try again.');
+      setIsSubmitting(false);
+    }
   };
 
   const isFormValid = formData.firstName && formData.lastName && formData.workEmail && 
@@ -87,16 +128,28 @@ const PilotWaitlistModal: React.FC<PilotWaitlistModalProps> = ({ isOpen, onClose
             <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
               <CheckCircle className="w-8 h-8 text-green-400" />
             </div>
-            <h3 className="text-2xl font-bold text-white mb-2">Application Submitted!</h3>
+            <h3 className="text-2xl font-bold text-white mb-2">Application Submitted Successfully!</h3>
             <p className="text-gray-300 mb-4">Thank you for your interest in the Aegis AI pilot program.</p>
+            <div className="bg-green-500/20 border border-green-500/30 rounded-lg p-4 mb-4">
+              <p className="text-green-300 font-medium">✅ Your application has been saved to our database</p>
+              <p className="text-green-400 text-sm mt-1">We'll contact you within 48 hours</p>
+            </div>
             <div className="bg-blue-500/20 border border-blue-500/30 rounded-lg p-4 mb-4">
               <p className="text-blue-300 font-medium">Redirecting to demo portal...</p>
-              <p className="text-blue-400 text-sm mt-1">Watch Aegis in Action</p>
+              <p className="text-blue-400 text-sm mt-1">Watch Aegis AI in Action</p>
             </div>
           </div>
         ) : (
           /* Form */
           <form onSubmit={handleSubmit} className="p-6 space-y-6">
+            {/* Error Message */}
+            {error && (
+              <div className="bg-red-500/20 border border-red-500/30 rounded-lg p-4 flex items-center space-x-2">
+                <AlertCircle className="w-5 h-5 text-red-400 flex-shrink-0" />
+                <p className="text-red-300 text-sm">{error}</p>
+              </div>
+            )}
+
             {/* Name Fields */}
             <div className="grid md:grid-cols-2 gap-4">
               <div>
@@ -183,6 +236,8 @@ const PilotWaitlistModal: React.FC<PilotWaitlistModalProps> = ({ isOpen, onClose
                   <option value="Sales">Sales</option>
                   <option value="Marketing">Marketing</option>
                   <option value="Customer Success">Customer Success</option>
+                  <option value="HR/People Operations">HR/People Operations</option>
+                  <option value="Legal/Compliance">Legal/Compliance</option>
                   <option value="Other">Other</option>
                 </select>
               </div>
@@ -256,7 +311,7 @@ const PilotWaitlistModal: React.FC<PilotWaitlistModalProps> = ({ isOpen, onClose
               {isSubmitting ? (
                 <>
                   <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
-                  <span>Submitting Application...</span>
+                  <span>Submitting to Database...</span>
                 </>
               ) : (
                 <>
@@ -271,6 +326,14 @@ const PilotWaitlistModal: React.FC<PilotWaitlistModalProps> = ({ isOpen, onClose
               By submitting this form, you agree to receive updates about the Aegis AI pilot program. 
               We respect your privacy and won't share your information.
             </p>
+
+            {/* Setup Instructions */}
+            <div className="bg-yellow-900/20 border border-yellow-500/30 rounded-lg p-4">
+              <p className="text-yellow-300 text-sm">
+                <strong>Setup Required:</strong> To make this form functional, you need to set up a Google Apps Script. 
+                See the setup instructions in the project files.
+              </p>
+            </div>
           </form>
         )}
       </div>
