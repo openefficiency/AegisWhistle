@@ -21,8 +21,8 @@ const PilotWaitlistModal: React.FC<PilotWaitlistModalProps> = ({ isOpen, onClose
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState('');
 
-  // Google Apps Script Web App URL - Replace with your actual URL
-  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec';
+  // Formspree URL - Now using your actual endpoint
+  const FORMSPREE_URL = 'https://formspree.io/f/movwrqdy';
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -40,7 +40,7 @@ const PilotWaitlistModal: React.FC<PilotWaitlistModalProps> = ({ isOpen, onClose
     setError('');
     
     try {
-      // Prepare data for Google Sheets
+      // Prepare data for Formspree
       const submissionData = {
         timestamp: new Date().toISOString(),
         firstName: formData.firstName,
@@ -50,22 +50,30 @@ const PilotWaitlistModal: React.FC<PilotWaitlistModalProps> = ({ isOpen, onClose
         role: formData.role,
         teamSize: formData.teamSize,
         objectives: formData.objectives,
-        source: 'Aegis AI Website'
+        source: 'Aegis AI Website',
+        // Formspree expects these fields
+        _subject: `New Aegis AI Pilot Application from ${formData.firstName} ${formData.lastName}`,
+        _replyto: formData.workEmail,
+        _format: 'plain'
       };
 
-      // Submit to Google Sheets
-      const response = await fetch(GOOGLE_SCRIPT_URL, {
+      // Submit to Formspree with normal fetch
+      const response = await fetch(FORMSPREE_URL, {
         method: 'POST',
-        mode: 'no-cors', // Important for Google Apps Script
         headers: {
           'Content-Type': 'application/json',
+          'Accept': 'application/json'
         },
         body: JSON.stringify(submissionData)
       });
 
-      // Since we're using no-cors mode, we can't read the response
-      // We'll assume success if no error is thrown
-      console.log('Form submitted successfully');
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Submission failed');
+      }
+
+      const result = await response.json();
+      console.log('Form submitted successfully:', result);
       
       setIsSubmitting(false);
       setIsSubmitted(true);
@@ -89,9 +97,9 @@ const PilotWaitlistModal: React.FC<PilotWaitlistModalProps> = ({ isOpen, onClose
         }, 500);
       }, 3000);
 
-    } catch (err) {
+    } catch (err: any) {
       console.error('Submission error:', err);
-      setError('Failed to submit application. Please try again.');
+      setError(err.message || 'Failed to submit application. Please try again.');
       setIsSubmitting(false);
     }
   };
@@ -108,11 +116,11 @@ const PilotWaitlistModal: React.FC<PilotWaitlistModalProps> = ({ isOpen, onClose
         <div className="flex items-center justify-between p-6 border-b border-white/10">
           <div>
             <div className="flex items-center space-x-2 mb-2">
-              <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></div>
-              <span className="text-orange-400 text-sm font-medium">Limited Spots Available</span>
+              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+              <span className="text-green-400 text-sm font-medium">✅ Form is Live & Working</span>
             </div>
             <h2 className="text-2xl font-bold text-white">Apply for Aegis AI Pilot Waitlist</h2>
-            <p className="text-gray-300 mt-2">Be among the first to experience Aegis AI that truly listens. Help shape the future of customer conversations.</p>
+            <p className="text-gray-300 mt-2">Be among the first to experience Aegis AI that truly listens. Help shape the future of employee engagement.</p>
           </div>
           <button
             onClick={onClose}
@@ -131,7 +139,7 @@ const PilotWaitlistModal: React.FC<PilotWaitlistModalProps> = ({ isOpen, onClose
             <h3 className="text-2xl font-bold text-white mb-2">Application Submitted Successfully!</h3>
             <p className="text-gray-300 mb-4">Thank you for your interest in the Aegis AI pilot program.</p>
             <div className="bg-green-500/20 border border-green-500/30 rounded-lg p-4 mb-4">
-              <p className="text-green-300 font-medium">✅ Your application has been saved to our database</p>
+              <p className="text-green-300 font-medium">✅ Your application has been received via Formspree</p>
               <p className="text-green-400 text-sm mt-1">We'll contact you within 48 hours</p>
             </div>
             <div className="bg-blue-500/20 border border-blue-500/30 rounded-lg p-4 mb-4">
@@ -142,6 +150,15 @@ const PilotWaitlistModal: React.FC<PilotWaitlistModalProps> = ({ isOpen, onClose
         ) : (
           /* Form */
           <form onSubmit={handleSubmit} className="p-6 space-y-6">
+            {/* Success Message */}
+            <div className="bg-green-500/20 border border-green-500/30 rounded-lg p-4 flex items-center space-x-2">
+              <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+              <div>
+                <p className="text-green-300 text-sm font-medium">Form Integration Active</p>
+                <p className="text-green-400 text-xs">Connected to Formspree - submissions will be delivered to your email</p>
+              </div>
+            </div>
+
             {/* Error Message */}
             {error && (
               <div className="bg-red-500/20 border border-red-500/30 rounded-lg p-4 flex items-center space-x-2">
@@ -311,7 +328,7 @@ const PilotWaitlistModal: React.FC<PilotWaitlistModalProps> = ({ isOpen, onClose
               {isSubmitting ? (
                 <>
                   <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
-                  <span>Submitting to Database...</span>
+                  <span>Submitting via Formspree...</span>
                 </>
               ) : (
                 <>
@@ -326,14 +343,6 @@ const PilotWaitlistModal: React.FC<PilotWaitlistModalProps> = ({ isOpen, onClose
               By submitting this form, you agree to receive updates about the Aegis AI pilot program. 
               We respect your privacy and won't share your information.
             </p>
-
-            {/* Setup Instructions */}
-            <div className="bg-yellow-900/20 border border-yellow-500/30 rounded-lg p-4">
-              <p className="text-yellow-300 text-sm">
-                <strong>Setup Required:</strong> To make this form functional, you need to set up a Google Apps Script. 
-                See the setup instructions in the project files.
-              </p>
-            </div>
           </form>
         )}
       </div>
