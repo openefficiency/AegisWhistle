@@ -103,7 +103,7 @@ const WhyChooseSection: React.FC = () => {
               <div className="mt-6">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-purple-400 text-sm">Processing Speed</span>
-                  <span className="text-purple-300 text-sm font-bold">< 100ms</span>
+                  <span className="text-purple-300 text-sm font-bold">{'< 100ms'}</span>
                 </div>
                 <div className="w-full bg-gray-700/50 rounded-full h-2 overflow-hidden">
                   <div className="bg-gradient-to-r from-purple-500 to-violet-500 h-2 rounded-full" 
