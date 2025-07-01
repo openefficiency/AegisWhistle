@@ -8,6 +8,7 @@ import LiveAudioAnalysis from './components/LiveAudioAnalysis';
 import UseCasesSection from './components/UseCasesSection';
 import WhyChooseSection from './components/WhyChooseSection';
 import HowItWorks from './components/HowItWorks';
+import EmpowerEmployeesCTA from './components/EmpowerEmployeesCTA';
 import VoiceAnalysis from './components/VoiceAnalysis';
 import PilotSpotlight from './components/PilotSpotlight';
 import FinalCTA from './components/FinalCTA';
@@ -26,6 +27,7 @@ function App() {
       <UseCasesSection />
       <WhyChooseSection />
       <HowItWorks />
+      <EmpowerEmployeesCTA />
       <VoiceAnalysis />
       <PilotSpotlight />
       <FinalCTA />
