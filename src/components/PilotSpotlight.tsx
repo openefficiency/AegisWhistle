@@ -15,7 +15,7 @@ const PilotSpotlight: React.FC = () => {
               rel="noopener noreferrer"
               className="text-blue-400 hover:text-blue-300 transition-colors duration-300 underline decoration-blue-400/50 hover:decoration-blue-300 underline-offset-4"
             >
-              GRIP: Grievance Redressal & Improvement Program
+              GRIP: Grievance Redressal & Intelligence Program
             </a>
           </h2>
           
