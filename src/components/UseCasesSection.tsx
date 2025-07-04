@@ -8,21 +8,22 @@ const UseCasesSection: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-            Powerful <span className="text-blue-400">Use Cases</span>
+            Powerful <span className="text-blue-400">AI Employee Engagement Use Cases</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-            From Employee Engagement to HR & Legal, Aegis AI 📣 transforms how businesses handle audio.
+            From advanced employee engagement analytics to HR automation and legal compliance, 
+            Aegis AI 📣 transforms how businesses leverage AI for employee voice analysis and workplace intelligence.
           </p>
         </div>
 
         {/* Use Cases Grid */}
         <div className="grid lg:grid-cols-2 gap-12 mb-20">
-          {/* Employee Engagement Excellence */}
+          {/* AI Employee Engagement Excellence */}
           <div className="bg-gradient-to-br from-blue-900/30 to-indigo-900/30 backdrop-blur-xl border border-blue-500/20 rounded-3xl p-8 hover:border-blue-400/40 transition-all duration-500 hover:scale-[1.02] shadow-2xl">
             {/* Visual Illustration */}
             <div className="mb-8 relative">
               <div className="bg-gradient-to-br from-blue-500/20 to-indigo-500/20 rounded-2xl p-6 border border-blue-400/30">
-                {/* Employee Engagement Visual */}
+                {/* AI Employee Engagement Visual */}
                 <div className="flex items-center justify-center space-x-4 mb-4">
                   <div className="relative">
                     <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center shadow-lg">
@@ -33,7 +34,7 @@ const UseCasesSection: React.FC = () => {
                     </div>
                   </div>
                   
-                  {/* Audio Waves */}
+                  {/* AI Audio Waves */}
                   <div className="flex items-center space-x-1">
                     {[...Array(5)].map((_, i) => (
                       <div
@@ -53,56 +54,58 @@ const UseCasesSection: React.FC = () => {
                       <TrendingUp className="w-8 h-8 text-white" />
                     </div>
                     <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center animate-pulse">
-                      <span className="text-white text-xs font-bold">+</span>
+                      <span className="text-white text-xs font-bold">AI</span>
                     </div>
                   </div>
                 </div>
                 
-                {/* Sentiment Indicators */}
+                {/* AI Sentiment Indicators */}
                 <div className="grid grid-cols-3 gap-2">
                   <div className="bg-green-500/20 rounded-lg p-2 text-center">
                     <div className="text-green-400 font-bold text-sm">+0.8</div>
-                    <div className="text-green-300 text-xs">Positive</div>
+                    <div className="text-green-300 text-xs">AI Positive</div>
                   </div>
                   <div className="bg-blue-500/20 rounded-lg p-2 text-center">
                     <div className="text-blue-400 font-bold text-sm">94%</div>
-                    <div className="text-blue-300 text-xs">Confidence</div>
+                    <div className="text-blue-300 text-xs">AI Confidence</div>
                   </div>
                   <div className="bg-purple-500/20 rounded-lg p-2 text-center">
                     <div className="text-purple-400 font-bold text-sm">Real-time</div>
-                    <div className="text-purple-300 text-xs">Analysis</div>
+                    <div className="text-purple-300 text-xs">AI Analysis</div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <h3 className="text-2xl font-bold text-white mb-4">Employee Engagement Excellence</h3>
+            <h3 className="text-2xl font-bold text-white mb-4">AI Employee Engagement Excellence</h3>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Automatically analyze employee calls, detect sentiment, and provide real-time insights to improve service quality and customer satisfaction.
+              Automatically analyze employee communications with advanced AI, detect sentiment patterns, 
+              and provide real-time insights to improve employee engagement, service quality, and workplace satisfaction 
+              through intelligent AI-powered employee voice analysis.
             </p>
             
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
-                <span className="text-gray-300">Real-time sentiment analysis</span>
+                <span className="text-gray-300">Real-time AI employee sentiment analysis</span>
               </div>
               <div className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-indigo-400 rounded-full animate-pulse"></div>
-                <span className="text-gray-300">Automated call summarization</span>
+                <span className="text-gray-300">Automated AI employee communication summarization</span>
               </div>
               <div className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
-                <span className="text-gray-300">Quality assurance monitoring</span>
+                <span className="text-gray-300">AI-powered employee engagement quality assurance</span>
               </div>
             </div>
           </div>
 
-          {/* Content & Media */}
+          {/* AI Content & Media Processing */}
           <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-xl border border-purple-500/20 rounded-3xl p-8 hover:border-purple-400/40 transition-all duration-500 hover:scale-[1.02] shadow-2xl">
             {/* Visual Illustration */}
             <div className="mb-8 relative">
               <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl p-6 border border-purple-400/30">
-                {/* Content Processing Visual */}
+                {/* AI Content Processing Visual */}
                 <div className="flex items-center justify-center space-x-4 mb-4">
                   <div className="relative">
                     <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center shadow-lg">
@@ -113,7 +116,7 @@ const UseCasesSection: React.FC = () => {
                     </div>
                   </div>
                   
-                  {/* Processing Arrow */}
+                  {/* AI Processing Arrow */}
                   <div className="flex flex-col items-center space-y-1">
                     <div className="w-8 h-0.5 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full animate-pulse"></div>
                     <div className="w-6 h-0.5 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></div>
@@ -130,79 +133,111 @@ const UseCasesSection: React.FC = () => {
                   </div>
                 </div>
                 
-                {/* Content Categories */}
+                {/* AI Content Categories */}
                 <div className="grid grid-cols-3 gap-2">
                   <div className="bg-purple-500/20 rounded-lg p-2 text-center">
-                    <div className="text-purple-400 font-bold text-sm">Text</div>
+                    <div className="text-purple-400 font-bold text-sm">AI Text</div>
                     <div className="text-purple-300 text-xs">Transcribed</div>
                   </div>
                   <div className="bg-pink-500/20 rounded-lg p-2 text-center">
-                    <div className="text-pink-400 font-bold text-sm">Tags</div>
+                    <div className="text-pink-400 font-bold text-sm">AI Tags</div>
                     <div className="text-pink-300 text-xs">Categorized</div>
                   </div>
                   <div className="bg-teal-500/20 rounded-lg p-2 text-center">
-                    <div className="text-teal-400 font-bold text-sm">Insights</div>
+                    <div className="text-teal-400 font-bold text-sm">AI Insights</div>
                     <div className="text-teal-300 text-xs">Extracted</div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <h3 className="text-2xl font-bold text-white mb-4">Content & Media</h3>
+            <h3 className="text-2xl font-bold text-white mb-4">AI Content & Media Intelligence</h3>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Transform audio reports into searchable, actionable insights.
+              Transform employee audio reports into searchable, actionable insights using advanced AI content processing 
+              and intelligent media analysis for comprehensive employee engagement understanding.
             </p>
             
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
-                <span className="text-gray-300">Automatic transcription</span>
+                <span className="text-gray-300">Automatic AI employee voice transcription</span>
               </div>
               <div className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-pink-400 rounded-full animate-pulse"></div>
-                <span className="text-gray-300">Content categorization</span>
+                <span className="text-gray-300">AI-powered employee content categorization</span>
               </div>
               <div className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-teal-400 rounded-full animate-pulse"></div>
-                <span className="text-gray-300">Highlight extraction</span>
+                <span className="text-gray-300">Intelligent AI employee insight extraction</span>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Additional Use Cases Grid */}
+        {/* Additional AI Use Cases Grid */}
         <div className="grid md:grid-cols-3 gap-8">
-          {/* Legal & Compliance */}
+          {/* AI Legal & Compliance */}
           <div className="bg-gradient-to-br from-red-900/20 to-orange-900/20 backdrop-blur-xl border border-red-500/20 rounded-2xl p-6 hover:border-red-400/40 transition-all duration-300 hover:scale-105 shadow-xl">
             <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-orange-600 rounded-xl flex items-center justify-center mb-4 shadow-lg">
               <Shield className="w-6 h-6 text-white" />
             </div>
-            <h4 className="text-white font-bold text-lg mb-3">Legal & Compliance</h4>
+            <h4 className="text-white font-bold text-lg mb-3">AI Legal & Compliance</h4>
             <p className="text-gray-300 text-sm">
-              Ensure regulatory compliance with automated monitoring and documentation of sensitive communications.
+              Ensure regulatory compliance with automated AI monitoring and documentation of sensitive employee communications 
+              for legal protection and workplace compliance.
             </p>
           </div>
 
-          {/* HR Analytics */}
+          {/* AI HR Analytics */}
           <div className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 backdrop-blur-xl border border-green-500/20 rounded-2xl p-6 hover:border-green-400/40 transition-all duration-300 hover:scale-105 shadow-xl">
             <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mb-4 shadow-lg">
               <TrendingUp className="w-6 h-6 text-white" />
             </div>
-            <h4 className="text-white font-bold text-lg mb-3">HR Analytics</h4>
+            <h4 className="text-white font-bold text-lg mb-3">AI HR Analytics</h4>
             <p className="text-gray-300 text-sm">
-              Gain deep insights into employee satisfaction, stress levels, and workplace dynamics through voice analysis.
+              Gain deep AI-powered insights into employee satisfaction, stress levels, and workplace dynamics 
+              through advanced employee voice analysis and sentiment intelligence.
             </p>
           </div>
 
-          {/* Crisis Management */}
+          {/* AI Crisis Management */}
           <div className="bg-gradient-to-br from-yellow-900/20 to-amber-900/20 backdrop-blur-xl border border-yellow-500/20 rounded-2xl p-6 hover:border-yellow-400/40 transition-all duration-300 hover:scale-105 shadow-xl">
             <div className="w-12 h-12 bg-gradient-to-br from-yellow-500 to-amber-600 rounded-xl flex items-center justify-center mb-4 shadow-lg">
               <MessageSquare className="w-6 h-6 text-white" />
             </div>
-            <h4 className="text-white font-bold text-lg mb-3">Crisis Management</h4>
+            <h4 className="text-white font-bold text-lg mb-3">AI Crisis Management</h4>
             <p className="text-gray-300 text-sm">
-              Rapidly identify and respond to critical situations through real-time audio monitoring and alert systems.
+              Rapidly identify and respond to critical employee situations through real-time AI audio monitoring 
+              and intelligent alert systems for proactive crisis management.
             </p>
+          </div>
+        </div>
+
+        {/* AI Employee Engagement CTA */}
+        <div className="mt-16 text-center">
+          <div className="bg-gradient-to-br from-blue-900/20 to-purple-900/20 backdrop-blur-xl border border-blue-500/30 rounded-3xl p-8 max-w-4xl mx-auto">
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Ready to Transform Employee Engagement with AI?
+            </h3>
+            <p className="text-gray-300 mb-6">
+              Join thousands of businesses already revolutionizing their employee engagement strategies with Aegis AI 📣 technology.
+            </p>
+            <div className="flex items-center justify-center space-x-6">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-blue-400 mb-1">1000+</div>
+                <p className="text-gray-400 text-sm">AI-Powered Businesses</p>
+              </div>
+              <div className="w-px h-12 bg-white/20"></div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-emerald-400 mb-1">99.7%</div>
+                <p className="text-gray-400 text-sm">AI Accuracy Rate</p>
+              </div>
+              <div className="w-px h-12 bg-white/20"></div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-purple-400 mb-1">24/7</div>
+                <p className="text-gray-400 text-sm">AI Employee Support</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

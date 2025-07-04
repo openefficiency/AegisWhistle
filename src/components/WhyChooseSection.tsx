@@ -15,16 +15,17 @@ const WhyChooseSection: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-            Why Choose <span className="text-blue-400">Aegis AI 📣?</span>
+            Why Choose <span className="text-blue-400">Aegis AI Employee Engagement Platform?</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Our advanced AI technology delivers unmatched performance in audio analysis and understanding.
+            Our advanced AI employee engagement technology delivers unmatched performance in employee voice analysis, 
+            sentiment detection, and workplace intelligence that traditional employee engagement solutions cannot match.
           </p>
         </div>
 
         {/* Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Advanced Audio Processing */}
+          {/* Advanced AI Employee Processing */}
           <div className="group bg-gradient-to-br from-blue-900/30 to-indigo-900/30 backdrop-blur-xl border border-blue-500/20 rounded-3xl p-8 hover:border-blue-400/50 transition-all duration-500 hover:scale-[1.02] shadow-2xl relative overflow-hidden">
             {/* Animated Background */}
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -36,9 +37,10 @@ const WhyChooseSection: React.FC = () => {
                 <div className="absolute inset-0 bg-white/20 rounded-2xl animate-pulse opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               
-              <h3 className="text-xl font-bold text-white mb-4">Advanced Audio Processing</h3>
+              <h3 className="text-xl font-bold text-white mb-4">Advanced AI Employee Processing</h3>
               <p className="text-gray-300 leading-relaxed">
-                State-of-the-art algorithms that process and understand audio with human-level comprehension.
+                State-of-the-art AI algorithms that process and understand employee communications with human-level comprehension 
+                for superior employee engagement insights.
               </p>
               
               {/* Visual Indicator */}
@@ -55,12 +57,12 @@ const WhyChooseSection: React.FC = () => {
                     />
                   ))}
                 </div>
-                <span className="text-blue-400 text-sm font-medium">Processing...</span>
+                <span className="text-blue-400 text-sm font-medium">AI Processing...</span>
               </div>
             </div>
           </div>
 
-          {/* Enterprise Security */}
+          {/* Enterprise AI Security */}
           <div className="group bg-gradient-to-br from-emerald-900/30 to-green-900/30 backdrop-blur-xl border border-emerald-500/20 rounded-3xl p-8 hover:border-emerald-400/50 transition-all duration-500 hover:scale-[1.02] shadow-2xl relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-green-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             
@@ -70,21 +72,22 @@ const WhyChooseSection: React.FC = () => {
                 <div className="absolute inset-0 bg-white/20 rounded-2xl animate-pulse opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               
-              <h3 className="text-xl font-bold text-white mb-4">Enterprise Security</h3>
+              <h3 className="text-xl font-bold text-white mb-4">Enterprise AI Security</h3>
               <p className="text-gray-300 leading-relaxed">
-                Bank-level encryption and security protocols to protect your sensitive audio data.
+                Bank-level encryption and AI-powered security protocols to protect your sensitive employee data 
+                and ensure complete anonymity in employee engagement processes.
               </p>
               
               {/* Security Indicator */}
               <div className="mt-6 flex items-center space-x-3">
                 <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                <span className="text-emerald-400 text-sm font-medium">Secured</span>
+                <span className="text-emerald-400 text-sm font-medium">AI-Secured</span>
                 <div className="flex-1 h-0.5 bg-gradient-to-r from-emerald-400/50 to-transparent rounded-full"></div>
               </div>
             </div>
           </div>
 
-          {/* Real-time Analysis */}
+          {/* Real-time AI Analysis */}
           <div className="group bg-gradient-to-br from-purple-900/30 to-violet-900/30 backdrop-blur-xl border border-purple-500/20 rounded-3xl p-8 hover:border-purple-400/50 transition-all duration-500 hover:scale-[1.02] shadow-2xl relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-violet-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             
@@ -94,15 +97,16 @@ const WhyChooseSection: React.FC = () => {
                 <div className="absolute inset-0 bg-white/20 rounded-2xl animate-pulse opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               
-              <h3 className="text-xl font-bold text-white mb-4">Real-time Analysis</h3>
+              <h3 className="text-xl font-bold text-white mb-4">Real-time AI Employee Analysis</h3>
               <p className="text-gray-300 leading-relaxed">
-                Lightning-fast processing that delivers insights and responses in milliseconds.
+                Lightning-fast AI processing that delivers employee engagement insights and responses in milliseconds 
+                for immediate workplace intelligence and action.
               </p>
               
               {/* Speed Indicator */}
               <div className="mt-6">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-purple-400 text-sm">Processing Speed</span>
+                  <span className="text-purple-400 text-sm">AI Processing Speed</span>
                   <span className="text-purple-300 text-sm font-bold">{'< 100ms'}</span>
                 </div>
                 <div className="w-full bg-gray-700/50 rounded-full h-2 overflow-hidden">
@@ -116,7 +120,7 @@ const WhyChooseSection: React.FC = () => {
             </div>
           </div>
 
-          {/* Multi-language Support */}
+          {/* Multi-language AI Support */}
           <div className="group bg-gradient-to-br from-cyan-900/30 to-teal-900/30 backdrop-blur-xl border border-cyan-500/20 rounded-3xl p-8 hover:border-cyan-400/50 transition-all duration-500 hover:scale-[1.02] shadow-2xl relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-teal-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             
@@ -126,9 +130,10 @@ const WhyChooseSection: React.FC = () => {
                 <div className="absolute inset-0 bg-white/20 rounded-2xl animate-pulse opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               
-              <h3 className="text-xl font-bold text-white mb-4">Multi-language Support</h3>
+              <h3 className="text-xl font-bold text-white mb-4">Multi-language AI Employee Support</h3>
               <p className="text-gray-300 leading-relaxed">
-                Understand and process audio in over 100 languages with native-level accuracy.
+                Understand and process employee communications in over 100 languages with native-level AI accuracy 
+                for global employee engagement solutions.
               </p>
               
               {/* Language Indicators */}
@@ -151,7 +156,7 @@ const WhyChooseSection: React.FC = () => {
             </div>
           </div>
 
-          {/* 99.7% Accuracy */}
+          {/* 99.7% AI Accuracy */}
           <div className="group bg-gradient-to-br from-orange-900/30 to-red-900/30 backdrop-blur-xl border border-orange-500/20 rounded-3xl p-8 hover:border-orange-400/50 transition-all duration-500 hover:scale-[1.02] shadow-2xl relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-red-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             
@@ -161,15 +166,16 @@ const WhyChooseSection: React.FC = () => {
                 <div className="absolute inset-0 bg-white/20 rounded-2xl animate-pulse opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               
-              <h3 className="text-xl font-bold text-white mb-4">99.7% Accuracy</h3>
+              <h3 className="text-xl font-bold text-white mb-4">99.7% AI Employee Accuracy</h3>
               <p className="text-gray-300 leading-relaxed">
-                Industry-leading accuracy rates that you can trust for mission-critical applications.
+                Industry-leading AI accuracy rates for employee engagement analysis that you can trust 
+                for mission-critical employee voice processing and workplace intelligence applications.
               </p>
               
               {/* Accuracy Meter */}
               <div className="mt-6">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-orange-400 text-sm">Accuracy Rate</span>
+                  <span className="text-orange-400 text-sm">AI Accuracy Rate</span>
                   <span className="text-orange-300 text-sm font-bold">99.7%</span>
                 </div>
                 <div className="w-full bg-gray-700/50 rounded-full h-3 overflow-hidden">
@@ -185,7 +191,7 @@ const WhyChooseSection: React.FC = () => {
             </div>
           </div>
 
-          {/* Easy Integration */}
+          {/* Easy AI Integration */}
           <div className="group bg-gradient-to-br from-pink-900/30 to-rose-900/30 backdrop-blur-xl border border-pink-500/20 rounded-3xl p-8 hover:border-pink-400/50 transition-all duration-500 hover:scale-[1.02] shadow-2xl relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-pink-500/5 to-rose-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             
@@ -195,14 +201,15 @@ const WhyChooseSection: React.FC = () => {
                 <div className="absolute inset-0 bg-white/20 rounded-2xl animate-pulse opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               
-              <h3 className="text-xl font-bold text-white mb-4">Easy Integration</h3>
+              <h3 className="text-xl font-bold text-white mb-4">Easy AI Employee Integration</h3>
               <p className="text-gray-300 leading-relaxed">
-                Simple APIs and SDKs that integrate seamlessly with your existing systems.
+                Simple AI APIs and SDKs that integrate seamlessly with your existing employee engagement systems 
+                and HR platforms for immediate AI-powered workplace intelligence.
               </p>
               
               {/* Integration Steps */}
               <div className="mt-6 space-y-2">
-                {['Connect', 'Configure', 'Deploy'].map((step, i) => (
+                {['Connect AI', 'Configure Employee Settings', 'Deploy AI Engine'].map((step, i) => (
                   <div key={step} className="flex items-center space-x-3">
                     <div className="w-6 h-6 bg-gradient-to-br from-pink-500 to-rose-600 rounded-full flex items-center justify-center text-white text-xs font-bold">
                       {i + 1}
@@ -216,29 +223,29 @@ const WhyChooseSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Bottom CTA */}
+        {/* Bottom AI Employee Engagement CTA */}
         <div className="mt-20 text-center">
           <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold text-white mb-4">
-              Ready to experience the future of audio intelligence?
+              Ready to experience the future of AI employee engagement intelligence?
             </h3>
             <p className="text-gray-300 mb-6">
-              Join thousands of businesses already transforming their operations with Aegis AI 📣.
+              Join thousands of businesses already transforming their employee engagement operations with Aegis AI 📣 technology.
             </p>
             <div className="flex items-center justify-center space-x-6">
               <div className="text-center">
                 <div className="text-2xl font-bold text-blue-400 mb-1">1000+</div>
-                <p className="text-gray-400 text-sm">Active Users</p>
+                <p className="text-gray-400 text-sm">AI-Powered Employee Systems</p>
               </div>
               <div className="w-px h-12 bg-white/20"></div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-emerald-400 mb-1">99.7%</div>
-                <p className="text-gray-400 text-sm">Accuracy Rate</p>
+                <p className="text-gray-400 text-sm">AI Employee Accuracy</p>
               </div>
               <div className="w-px h-12 bg-white/20"></div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-purple-400 mb-1">24/7</div>
-                <p className="text-gray-400 text-sm">Support</p>
+                <p className="text-gray-400 text-sm">AI Employee Support</p>
               </div>
             </div>
           </div>
